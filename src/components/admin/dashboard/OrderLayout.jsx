@@ -1,5 +1,6 @@
 import { Divider, Radio, Table } from "antd";
 import React, { useEffect, useState } from "react";
+import ChartComponent from "./ChartComponent";
 
 const columns = [
   {
@@ -155,6 +156,7 @@ const OrderLayout = () => {
   };
 
   return (
+    <>
     <div>
       <Radio.Group
         onChange={({ target: { value } }) => {
@@ -179,6 +181,8 @@ const OrderLayout = () => {
         dataSource={data}
       />
     </div>
+    
+    </>
   );
 };
 

@@ -96,7 +96,7 @@ export default function LoginLayout() {
                     </form>
                     <span className="d-block text-center my-4 text-muted">
                       Don't have an account ?{" "}
-                      <NavLink to="/register">Sign Up</NavLink>
+                      <NavLink to="/client/register">Sign Up</NavLink>
                     </span>
                     <span className="d-block text-center my-4 text-muted">
                       &mdash; or &mdash;

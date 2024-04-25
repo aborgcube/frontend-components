@@ -140,7 +140,7 @@ export default function RegisterLayout() {
     <>
       <div className="container-fluid">
         <div className="row no-gutter">
-          <div className="col-md-6 d-none d-md-flex bg-image"></div>
+          <div className="col-md-6 d-none d-md-flex bg-image-register"></div>
 
           <div className="col-md-6 bg-light">
             <div className="login d-flex align-items-center py-5">
@@ -266,7 +266,7 @@ export default function RegisterLayout() {
                     </form>
                     <span className="d-block text-center my-4 text-muted">
                       Don't have an account ?{" "}
-                      <NavLink to="/login">Sign In</NavLink>
+                      <NavLink to="/client/login">Sign In</NavLink>
                     </span>
                     <span className="d-block text-center my-4 text-muted">
                       &mdash; or &mdash;

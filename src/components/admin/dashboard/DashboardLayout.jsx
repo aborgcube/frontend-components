@@ -1,4 +1,5 @@
 import {
+  BarChartOutlined,
   DesktopOutlined,
   FileOutlined,
   PieChartOutlined,
@@ -7,6 +8,7 @@ import {
 } from "@ant-design/icons";
 import { Breadcrumb, Layout, Menu, theme } from "antd";
 import React, { useState } from "react";
+import ChartComponent from "./ChartComponent"; // Renamed import
 import OrderLayout from "./OrderLayout";
 import ProfileLayout from "./ProfileLayout";
 // Import other layout components here
@@ -26,6 +28,7 @@ function getItem(label, key, icon, children) {
 const layoutComponents = {
   1: <OrderLayout />,
   2: <ProfileLayout />,
+  10 : <ChartComponent />, // Using the corrected import name
   // Add other menu item keys and their corresponding layout components here
 };
 
@@ -33,7 +36,7 @@ const items = [
   getItem("Option 1", "1", <PieChartOutlined />),
   getItem("Option 2", "2", <DesktopOutlined />),
   getItem("User", "sub1", <UserOutlined />, [
-    getItem("Tom", "3"),
+    getItem("Tom", "3"), // This should be "3" to correspond to the Chart component
     getItem("Bill", "4"),
     getItem("Alex", "5"),
   ]),
@@ -42,6 +45,7 @@ const items = [
     getItem("Team 2", "8"),
   ]),
   getItem("Files", "9", <FileOutlined />),
+  getItem("Chart", "10", <BarChartOutlined />), // Added Chart menu item
 ];
 
 const DashboardLayout = () => {
